@@ -1,0 +1,33 @@
+.copilotkit-debugger-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.copilotkit-debugger-action-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease;
+}
+
+.copilotkit-debugger-action-item:hover {
+  background-color: #f0f2f5;
+}
+
+.copilotkit-debugger-action-name {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 14px;
+  color: #0366d6;
+  margin-bottom: 4px;
+}
+
+.copilotkit-debugger-action-description {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+}

@@ -1,0 +1,134 @@
+.copilotkit-debugger-container {
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: #4a56e2;
+  color: white;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 185px;
+  height: 34px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: copilotkit-debugger-fadeIn 0.3s ease-in-out 0.5s forwards;
+  transition: all 0.3s ease-in;
+}
+
+.copilotkit-debugger-container:hover:not(.copilotkit-debugger-expanded) {
+  background-color: #3a46d2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded {
+  width: 700px;
+  height: 400px;
+  border-radius: 8px;
+  color: #333;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  cursor: default;
+  position: fixed;
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded .copilotkit-debugger-title-bar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.copilotkit-debugger-title-text {
+  flex: 1;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+  cursor: move;
+  cursor: grab;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.copilotkit-debugger-title-text:active {
+  cursor: grabbing;
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded .copilotkit-debugger-toggle-button {
+  transform: rotate(0deg);
+}
+
+.copilotkit-debugger-toggle-button {
+  transform: rotate(180deg);
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  margin: 0 8px 0 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copilotkit-debugger-toggle-button:focus {
+  /* still present on focus-visible */
+  outline: none;
+}
+
+.copilotkit-debugger-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copilotkit-debugger-tabs {
+  display: none;
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded .copilotkit-debugger-tabs {
+  display: flex;
+}
+
+.copilotkit-debugger-content {
+  display: none;
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+  opacity: 0;
+  background-color: white;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded .copilotkit-debugger-content {
+  display: block;
+  opacity: 1;
+}
+
+.copilotkit-debugger-title-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+}
+
+.copilotkit-debugger-container.copilotkit-debugger-expanded .copilotkit-debugger-resize-handle {
+  height: 8px;
+  width: 100%;
+  cursor: ns-resize;
+  background-color: white;
+}

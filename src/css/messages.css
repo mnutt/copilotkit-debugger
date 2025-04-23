@@ -1,0 +1,115 @@
+.copilotkit-debugger-messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.copilotkit-debugger-message {
+  border-radius: 8px;
+  padding: 12px;
+  transition: background-color 0.2s ease;
+  max-width: 100%;
+}
+
+.copilotkit-debugger-message-user {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+}
+
+.copilotkit-debugger-message-assistant {
+  background-color: #f1f3f4;
+  border-left: 4px solid #9e9e9e;
+}
+
+.copilotkit-debugger-message-action-execution {
+  background-color: #f1f3f4;
+  border-left: 4px solid #c0b7ff;
+}
+
+.copilotkit-debugger-message-result {
+  background-color: #f1f3f4;
+  border-left: 4px solid #85cc65;
+}
+
+.copilotkit-debugger-message-action-execution-arguments {
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.copilotkit-debugger-message-error {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.copilotkit-debugger-message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #5f6368;
+  cursor: pointer;
+}
+
+.copilotkit-debugger-message-role {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.copilotkit-debugger-message-time {
+  margin-right: 8px;
+  color: #80868b;
+}
+
+.copilotkit-debugger-message-id {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 11px;
+  color: #9aa0a6;
+  margin-left: auto;
+}
+
+.copilotkit-debugger-message-content {
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.copilotkit-debugger-message-meta {
+  display: flex;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #80868b;
+  gap: 8px;
+}
+
+.copilotkit-debugger-message-type {
+  background-color: #e8f0fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #1a73e8;
+}
+
+.copilotkit-debugger-message-status {
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.copilotkit-debugger-message-status.success {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+.copilotkit-debugger-message-status.error {
+  background-color: #fce8e6;
+  color: #c5221f;
+}
+
+.copilotkit-debugger-message-parent-message-id {
+  background: none;
+  border: none;
+  color: #80868b;
+  cursor: pointer;
+  padding: 2px 6px;
+}

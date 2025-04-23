@@ -1,0 +1,45 @@
+.copilotkit-debugger-tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #ddd;
+}
+
+.copilotkit-debugger-tab.copilotkit-debugger-tab-active {
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  color: #4a56e2;
+}
+
+.copilotkit-debugger-tab:not(.copilotkit-debugger-tab-active):hover {
+  background-color: #6c75f6;
+  border-radius: 4px 4px 0 0;
+}
+
+.copilotkit-debugger-tab-content {
+  display: none;
+  height: 100%;
+  overflow: auto;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  text-align: left;
+}
+
+.copilotkit-debugger-tab-content.copilotkit-debugger-tab-active {
+  display: block;
+}
+
+.copilotkit-debugger-tab-content pre {
+  margin: 0;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 280px;
+  overflow: auto;
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}
