@@ -4,6 +4,14 @@ UI widget that shows useful information about CopilotKit.
 
 ![CopilotKit Debugger Screenshot](docs/screenshot.png)
 
+## Functionality
+
+Inspect:
+
+* messages sent and received
+* frontend actions registered
+* ~readable data registered~ not yet, dependent on https://github.com/CopilotKit/CopilotKit/pull/1710
+
 ## Usage
 
 ```sh
