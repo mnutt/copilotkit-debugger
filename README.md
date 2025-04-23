@@ -2,13 +2,15 @@
 
 UI widget that shows useful information about CopilotKit.
 
+![CopilotKit Debugger Screenshot](docs/screenshot.png)
+
 ## Usage
 
 ```sh
 npm install copilotkit-debugger
 ```
 
-Then, where you place your CopilotKitProvider:
+Then, where you place your `CopilotKit` provider:
 
 ```tsx
 import { CopilotKit } from "@copilotkit/react-core";
