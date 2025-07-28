@@ -1,13 +1,13 @@
-/* import { Tree, TreeNode } from "@copilotkit/react-core"; */
+import { Tree, TreeNode } from "@copilotkit/react-core";
 
-const ReadableContextDisplay = ({ contexts }: { contexts: /* TreeNode[] */ any }) => {
+const ReadableContextDisplay = ({ contexts }: { contexts: TreeNode[] }) => {
   if (!contexts || contexts.length === 0) {
     return <p>No readable context available</p>;
   }
 
   return (
     <div className="copilotkit-debugger-readable-list">
-      {contexts.map((contextItem: /* TreeNode */ any, index: number) => {
+      {contexts.map((contextItem: TreeNode, index: number) => {
         const { value, children, categories, id } = contextItem;
 
         return (
@@ -20,9 +20,9 @@ const ReadableContextDisplay = ({ contexts }: { contexts: /* TreeNode[] */ any }
 
             {categories && categories.size > 0 && (
               <div className="copilotkit-debugger-readable-categories">
-                {/* Array.from(categories).map((category: string) => (
+                {Array.from(categories).map((category: string) => (
                   <div key={category} className="copilotkit-debugger-readable-category">{category}</div>
-                )) */}
+                ))}
               </div>
             )}
 
