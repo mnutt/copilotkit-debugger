@@ -19,7 +19,7 @@ function loadExpandedState(): boolean {
 }
 
 export const CopilotContextDebugger = () => {
-  const { actions, /* getAllContext */ } = useCopilotContext();
+  const { actions, getAllContext } = useCopilotContext();
   const { messages } = useCopilotMessagesContext();
 
   const [isExpanded, setIsExpanded] = useState(() => loadExpandedState());
@@ -70,7 +70,7 @@ export const CopilotContextDebugger = () => {
         </TabContent>
 
         <TabContent activeTab={activeTab} tab="readable">
-          <ContextDisplay contexts={/* getAllContext() */[]} />
+          <ContextDisplay contexts={getAllContext()} />
         </TabContent>
 
         <TabContent activeTab={activeTab} tab="messages">
